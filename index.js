@@ -1,4 +1,5 @@
 import Sprite from "./base/Sprite.js";
+import Text from "./ui/text.js";
 
 let canvas = document.getElementsByClassName(
     "mainWindow"
@@ -9,6 +10,8 @@ let c = canvas.getContext("2d");
 
 let player = new Sprite(c, { x: 100, y: 100 }, 50, 50)
 
+let text = new Text("Willkommen", { x: 0, y: 30 }, c);
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -17,5 +20,8 @@ animate();
 
 function animate() {
     window.requestAnimationFrame(animate);
+
+
     player.update();
+    text.update();
 }

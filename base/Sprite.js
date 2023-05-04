@@ -5,7 +5,6 @@ export default class Sprite {
         this.position = position;
         this.width = width;
         this.height = height;
-        console.log(this.height);
     }
 
 
@@ -21,8 +20,7 @@ export default class Sprite {
     }
 
     update() {
-        this.draw()
-        console.log(this.height);
+        this.draw();
     }
 }
 
